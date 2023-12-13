@@ -3,7 +3,7 @@ from kivy.uix.screenmanager import Screen, ScreenManager
 from kivy.lang import Builder
 from kivy.config import Config
 
-Config.set('graphics','Resizable','0');
+Config.set('graphics','resizable','0');
 Config.set('graphics','width','412');
 Config.set('graphics','height','712');
 
@@ -31,4 +31,4 @@ class MyQuizzApp(App):
     def build(self):
         return file
 
-MyQuizzApp().run
+MyQuizzApp().run()

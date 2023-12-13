@@ -6,18 +6,18 @@ ScreenManagement:
     Pagefinale:
 
 <main>:
-    name:'home'
+    name:'quizz'
     canvas.before:
         Rectangle:
-            size:self.size
-            source: '/quizz.jpg'
+            size: self.size
+            source: 'quizz.jpg'
 
     Button:
         on_release:app.root.current = 'z1'
         size_hint:0.7,0.45
         pos_hint: {"x":0.15,"y":0.15}
-        background_normal:'btn.png'
-        background_down:'btn.png'
+        background_normal:'play.png'
+        background_down:'play.png'
 
 <Z1>:
     name:'z1'
@@ -25,7 +25,7 @@ ScreenManagement:
         orientation: 'vertical'
 
         Label:
-            text:'1. Where is MT. Everest Located?'
+            text:'1. pq taysir aime le khnouna?'
             text_size: self.width, None
             size_hint: 1, None
             height: self.texture_size[1]
@@ -35,3 +35,49 @@ ScreenManagement:
                 Rectangle:
                     pos: self.pos
                     size: self.size        
+
+        Button:
+            text: 'A. OUI'
+            text_size: self.width, None
+            font_size:self.width/15
+            color: (1,1,0)
+            on_release:self.background_color = (255,0,0)
+            
+        Button:
+            text: 'B. NON'
+            text_size: self.width, None
+            font_size:self.width/15
+            color: (1,1,0)
+            on_release:self.background_color = (255,0,0)
+
+        Button:
+            text: 'C. JSP'
+            text_size: self.width, None
+            font_size:self.width/15
+            color: (1,1,0)
+            on_release:self.background_color = (255,0,0)
+
+        Button:
+            text: 'D. Qahba'
+            text_size: self.width, None
+            font_size:self.width/15
+            color: (1,1,0)
+            on_release:self.background_color = (255,0,0)
+
+
+<Z2>:
+    name: 'z2'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text: '2. karu karu karupiya?'
+            text_size: self.width, None
+            size_hint: 1, None  # Corrected size_hint
+            height: self.texture_size[1]
+            font_size: self.width / 15
+            color: 255, 255, 0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
