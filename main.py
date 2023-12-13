@@ -1,5 +1,1 @@
-print("subbu")
-
-for i in range(5):
-    pass
-print("")
+from kivy.app import App 
