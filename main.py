@@ -1,5 +1,6 @@
 from kivy.app import App 
 from kivy.uix.label import Label
+from kivy.uix.gridlayout import GridLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 
@@ -8,10 +9,11 @@ class QuizApp(App):
         self.theme = None 
         layout = BoxLayout(orientation='vertical')
         # Boutons pour sélectionner le thème
+        theme_buttons = BoxLayout
         theme_buttons = BoxLayout(orientation='horizontal')
-        theme_buttons.add_widget(Button(text='Thème 1', on_press=self.select_theme))
-        theme_buttons.add_widget(Button(text='Thème 2', on_press=self.select_theme))
-        theme_buttons.add_widget(Button(text='Thème 3', on_press=self.select_theme))
+        theme_buttons.add_widget(Button(text='Vijay', on_press=self.select_theme))
+        theme_buttons.add_widget(Button(text='Muthuvel', on_press=self.select_theme))
+        theme_buttons.add_widget(Button(text='Taymegh D. Lawis', on_press=self.select_theme))
         layout.add_widget(theme_buttons)
 
         # Conteneur pour les questions
