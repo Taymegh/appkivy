@@ -1,0 +1,37 @@
+ScreenManagement:
+    main:
+    Z1:
+    Z2:
+    Z3:
+    Pagefinale:
+
+<main>:
+    name:'home'
+    canvas.before:
+        Rectangle:
+            size:self.size
+            source: '/quizz.jpg'
+
+    Button:
+        on_release:app.root.current = 'z1'
+        size_hint:0.7,0.45
+        pos_hint: {"x":0.15,"y":0.15}
+        background_normal:'btn.png'
+        background_down:'btn.png'
+
+<Z1>:
+    name:'z1'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'1. Where is MT. Everest Located?'
+            text_size: self.width, None
+            size_hint: 1, None
+            height: self.texture_size[1]
+            font_size:self.width/15
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size        
