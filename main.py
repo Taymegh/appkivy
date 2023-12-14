@@ -7,21 +7,40 @@ from kivy.uix.button import Button
 from kivy.uix.slider import Slider
 from kivy.uix.checkbox import CheckBox
 from kivy.uix.carousel import Carousel
+from kivy.graphics import Color, Rectangle
+from kivy.core.window import Window
+from kivy.uix.spinner import Spinner
+# from kivy.uix.progressbar import ProgressBar
+
 
 
 
 class TestApp(App):
     def build(self):
-        layout = BoxLayout(orientation='vertical', size=(800,600))
+        Window.clearcolor = (0.4, 0.7, 0.9, 0.8)
+        layout = BoxLayout(orientation='vertical', size=(Window.width, Window.height))
+        
+
         label = Label(
             text='Hello, world',
             color=(0.9, 1, 0, 1)
         )
+        mon_spinner = Spinner(
+            text= 'Lavisan',
+            values=('Lavisan', 'Sarubn', 'Taysir'),
+            size_hint=(None, None),
+            size= (100, 44),
+            pos_hint={'center_x': .5, 'center_y': .5})
+        
+
+        # ma_barre= ProgressBar(max=1000)
+        # ma_barre.value = 750
         self.valeur_slider = Label()
         text_input = TextInput(multiline=False)
-        self.mon_image= Image(source="image2.jpg")
+        self.mon_image= Image(source="image2.jpg",size_hint=(None, None), size=(500, 300))
         mon_button= Button(text= "Clique")
         mon_button.bind(on_press=self.cacher_image) 
+        button2 = Button(text="karuppu")
 
         ma_checkbox= CheckBox()
 
@@ -44,8 +63,10 @@ class TestApp(App):
         self.mon_slider.bind(value=self.afficher_valeur)
         layout.add_widget(self.valeur_slider)
         layout.add_widget(ma_checkbox)
+        layout.add_widget(mon_spinner)
+        layout.add_widget(button2)
         # layout.add_widget(mon_carousel)
-
+        # layout.add_widget(ma_barre)
 
         return layout
     
@@ -57,5 +78,12 @@ class TestApp(App):
 
     def afficher_valeur(self, instance, valeur):
         self.valeur_slider.text= str(valeur)
+
+    # def montrer_valeur(mon_spinner, text):
+    #     print()
+
+class fullImage(Image):
+        pass
+
 
 TestApp().run()
