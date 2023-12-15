@@ -37,7 +37,7 @@ class TestApp(App):
         # ma_barre.value = 750
         self.valeur_slider = Label()
         text_input = TextInput(multiline=False)
-        self.mon_image= Image(source="image2.jpg",size_hint=(None, None), size=(500, 300))
+        self.mon_image= Image(source="image2.jpg",size_hint=(None, None), size=(400, 500))
         mon_button= Button(text= "Clique")
         mon_button.bind(on_press=self.cacher_image) 
         button2 = Button(text="karuppu")
