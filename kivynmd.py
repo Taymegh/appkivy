@@ -24,8 +24,8 @@ KV = '''
     Image:
         id: mon_image
         source: "image2.jpg"
-        size_hint: None, None
-        size: (300, 300)
+        size_hint: .5, .5
+        # size: (300, 300)
         pos_hint: {'center_x': 0.5,'center_y': 0.7}
 
     MDFlatButton:
