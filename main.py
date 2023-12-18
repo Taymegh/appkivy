@@ -8,5 +8,5 @@ class QuizApp(App):
     def build(self):
         label = Label(text='Pundizz', align ='center')
         return label
-        pass
+    
 QuizApp().run()
