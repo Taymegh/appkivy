@@ -1,0 +1,71 @@
+Management:
+    Menu:
+    Jeu:
+    Ecran:
+
+
+<Menu>:
+    name: "menu"
+    canvas.before:
+        Color:
+            rgba: (253/255, 253/255, 142/255, 1)
+        Rectangle:
+            pos:self.pos 
+            size:self.size
+    FloatLayout:  
+        orientation: 'vertical'
+    MDLabel:
+        text: "Menu du jeu"
+        size_hint: None, None
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    MDFlatButton:
+        text: "Jouer"
+        size_hint: None, None
+        pos_hint: {'center_x': 0.5,'center_y': 0.4}
+        md_bg_color: 'orange'
+        on_press: app.root.current = 'jeu'
+<Jeu>:
+    name: 'jeu'
+    canvas.before:
+        Color:
+            rgba: (253/255, 253/255, 142/255, 1)
+        Rectangle:
+            pos:self.pos 
+            size:self.size
+    FloatLayout:
+        orientation: 'vertical'
+    MDLabel:
+        text: 'Le jeu de Lawis'
+        size_hint: None, None
+        pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+    MDFlatButton:
+        text: 'Retour'
+        size_hint: None, None
+        pos_hint: {'center_x': 0.5,'center_y': 0.4}
+        md_bg_color: 'orange'
+        on_press: app.root.current = 'menu'
+    MDFlatButton:
+        text: 'Suivant'
+        size_hint: None, None
+        md_bg_color: 'orange'
+        on_press: app.root.current = 'ecran'
+
+
+<Ecran>:
+    name: 'ecran'
+    canvas.before:
+        Color:
+            rgba: (253/255, 253/255, 142/255, 1)
+        Rectangle:
+            pos:self.pos 
+            size:self.size
+    FloatLayout:
+        orientation: 'vertical'
+    MDLabel:
+        text: "Combien font 2+2?"
+        size_hint: None, None
+        pos_hint: {'center_x': 0.5,'center_y': 0.5}
+    TextInput:
+        pos_hint: {'center_x': 0.5,'center_y': 0.4}
+        size_hint: 0.3, 0.2
+        
