@@ -1,8 +1,10 @@
 ScreenManagement:
     HomePage:
     Q1:
-    Q1:
-    Q1:
+    Q2:
+    Q3:
+    Q4:
+    Q5:
     FinalPage:
 
 
@@ -12,3 +14,11 @@ ScreenManagement:
         Rectangle:
             size:self.size
             source: 'home.png'
+
+
+    Button:
+        on_release:app.root.current = 'q1'
+        size_hint:0.7,0.45
+        pos_hint: {"x":0.15,"y":0.15}
+        background_normal:'btn.png'
+        background_down:'btn.png'
