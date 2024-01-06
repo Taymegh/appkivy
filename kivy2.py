@@ -69,3 +69,17 @@ class QuizApp(App):
 
 if __name__ == '__main__':
     QuizApp().run()
+
+
+"""
+class QuizApp(App):
+    def build(self):
+        label = MDLabel(text = 'Pundizz', halign = 'center', font_style = 'H2')
+        return label
+        screen = Screen()
+        btn_flat = MDRectangleFlatButton(text = 'Jouer', 
+                                pos_hint = {'center_x': 1, 'center_y': 1})
+        screen.add_widget(btn_flat)
+        return screen  
+"""
+
